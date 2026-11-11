@@ -32,19 +32,19 @@ const FeaturedProject = ({ type, title, summary, link, github, img, imgAlt, tags
         </a>
       )}
 
-      <div className={`${img ? "w-full lg:w-1/2" : "w-full"} flex flex-col items-start justify-between`}>
+      <div className={`${img ? "w-full lg:w-1/2" : "w-full"} flex flex-col items-start justify-between text-left`}>
         <span className="text-primary font-semibold text-base sm:text-lg lg:text-xl dark:text-primaryDark">
           {type}
         </span>
         <h2 className="my-2 w-full text-left text-2xl sm:text-3xl lg:text-4xl font-bold dark:text-light">
           {title}
         </h2>
-        <p className="my-2 font-medium text-dark dark:text-light text-sm sm:text-base">
+        <p className="my-2 font-medium text-dark dark:text-light text-sm sm:text-base leading-relaxed">
           {summary}
         </p>
 
         {highlights.length > 0 && (
-          <ul className="list-disc pl-5 my-2 space-y-1 text-sm font-medium text-dark/85 dark:text-light/85">
+          <ul className="list-disc pl-5 my-2 space-y-1.5 text-sm font-medium leading-relaxed text-dark/85 dark:text-light/85">
             {highlights.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -118,7 +118,7 @@ const Project = ({ title, type, summary, img, imgAlt, github, tags = [] }) => {
         <h2 className="my-2 w-full text-left text-2xl font-bold dark:text-light max-sm:text-xl">
           {title}
         </h2>
-        <p className="my-2 font-medium text-dark/90 dark:text-light/90 text-sm">
+        <p className="my-2 font-medium text-dark/90 dark:text-light/90 text-sm leading-relaxed text-left">
           {summary}
         </p>
       </div>
@@ -209,7 +209,7 @@ export default function Projects() {
                   img={portfolioImg}
                   imgAlt="Boobalan V Personal Portfolio Preview"
                   github="https://github.com/BoobalanIT/Portfolio"
-                  link="https://alanz-tech.netlify.app"
+                  link="https://alanz.netlify.app"
                   tags={["Next.js", "React", "Tailwind CSS", "Framer Motion", "Responsive UI"]}
                 />
               </div>

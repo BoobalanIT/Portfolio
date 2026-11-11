@@ -15,4 +15,4 @@ npm install
 npm run dev
 ```
 
-Open [https://alanz-tech.netlify.app/](https://alanz-tech.netlify.app/) in your browser.
+Open [https://alanz.netlify.app/](https://alanz.netlify.app/) in your browser.

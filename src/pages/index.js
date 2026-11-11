@@ -55,18 +55,18 @@ export default function Home() {
               </div>
 
               {/* Text Side */}
-              <div className="flex w-full lg:w-1/2 flex-col items-center lg:items-start text-center lg:text-left self-center">
+              <div className="flex w-full lg:w-1/2 flex-col items-start sm:items-center lg:items-start text-left sm:text-center lg:text-left self-center">
                 <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary dark:text-primaryDark mb-2">
                   Software Developer &bull; Full-Stack Developer
                 </span>
                 <AnimatedText
                   text="Building Full-Stack & AI-Powered Solutions."
-                  className="!text-3xl sm:!text-4xl md:!text-5xl xl:!text-6xl !text-center lg:!text-left"
+                  className="!text-3xl sm:!text-4xl md:!text-5xl xl:!text-6xl !text-left sm:!text-center lg:!text-left"
                 />
-                <p className="my-4 text-sm sm:text-base font-medium max-w-2xl">
-                  Hi, I&apos;m <strong>Boobalan V</strong>, a Software Developer with nearly 2 years of experience building web applications, REST APIs, and database-driven platforms using <strong>Angular, Node.js, NestJS, PHP, PostgreSQL, and MongoDB</strong> &mdash; including AI-powered business intelligence with <strong>Model Context Protocol (MCP)</strong> and open-source LLM integration.
+                <p className="my-4 text-sm sm:text-base font-medium leading-relaxed max-w-2xl">
+                  Hi, I&apos;m <strong>Boobalan V</strong>, a Software Developer with nearly 2 years of experience building web applications, REST APIs, and database-driven platforms using <strong>Angular, Node.js, NestJS, PHP, PostgreSQL, and MongoDB</strong> &mdash; including AI&#8209;powered business intelligence with <strong>Model Context Protocol (MCP)</strong> and open-source LLM integration.
                 </p>
-                <div className="mt-2 flex items-center justify-center lg:justify-start gap-3 sm:gap-4 flex-wrap">
+                <div className="mt-2 flex items-center justify-start sm:justify-center lg:justify-start gap-3 sm:gap-4 flex-wrap">
                   <a
                     href="/assets/docs/Boobalan%20V%20%E2%80%94%20Resume.pdf"
                     target="_blank"

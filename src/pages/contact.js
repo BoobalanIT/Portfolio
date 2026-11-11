@@ -30,11 +30,11 @@ export default function Contact() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 w-full">
               {/* Contact Info Cards */}
-              <div className="lg:col-span-5 flex flex-col gap-5 sm:gap-6">
+              <div className="lg:col-span-5 flex flex-col gap-5 sm:gap-6 text-left">
                 <h2 className="text-2xl sm:text-3xl font-bold dark:text-light">
                   Contact Information
                 </h2>
-                <p className="font-medium text-sm sm:text-base text-dark/80 dark:text-light/80">
+                <p className="font-medium text-sm sm:text-base leading-relaxed text-dark/80 dark:text-light/80">
                   Feel free to reach out for full-stack software development opportunities, backend/API architecture, AI &amp; MCP integrations, or freelance collaborations.
                 </p>
 

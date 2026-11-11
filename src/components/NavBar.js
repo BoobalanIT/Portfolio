@@ -121,19 +121,16 @@ const NavBar = () => {
         aria-label="Toggle main menu"
       >
         <span
-          className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
-            isOpen ? "rotate-45 translate-y-1" : "-translate-y-1"
-          }`}
+          className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-1"
+            }`}
         />
         <span
-          className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out my-0.5 ${
-            isOpen ? "opacity-0" : "opacity-100"
-          }`}
+          className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out my-0.5 ${isOpen ? "opacity-0" : "opacity-100"
+            }`}
         />
         <span
-          className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
-            isOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"
-          }`}
+          className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"
+            }`}
         />
       </button>
 
@@ -141,9 +138,8 @@ const NavBar = () => {
       <div className="hidden max-lg:flex items-center z-40">
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`w-7 h-7 ease flex items-center justify-center rounded-full p-1 ${
-            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-          }`}
+          className={`w-7 h-7 ease flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+            }`}
           aria-label="Toggle theme"
         >
           {mode === "dark" ? (
@@ -171,7 +167,7 @@ const NavBar = () => {
           <a href="https://www.linkedin.com/in/boobalan001/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-6 hover:-translate-y-0.5 transition-transform">
             <LinkedInIcon className="w-full h-auto" />
           </a>
-          <a href="https://alanz-tech.netlify.app" target="_blank" rel="noreferrer" aria-label="Previous Portfolio" className="w-6 hover:-translate-y-0.5 transition-transform">
+          <a href="https://alanz.netlify.app" target="_blank" rel="noreferrer" aria-label="Previous Portfolio" className="w-6 hover:-translate-y-0.5 transition-transform">
             <GlobeIcon className="w-full h-auto" />
           </a>
           <a href="mailto:boobalanvaithiyanthan1@gmail.com" aria-label="Email" className="w-6 hover:-translate-y-0.5 transition-transform">
@@ -181,9 +177,8 @@ const NavBar = () => {
           {/* Desktop Theme Switcher */}
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-6 h-6 ease flex items-center justify-center rounded-full p-1 ${
-              mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-            }`}
+            className={`w-6 h-6 ease flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+              }`}
             aria-label="Toggle theme"
           >
             {mode === "dark" ? (
@@ -233,7 +228,7 @@ const NavBar = () => {
               <a href="https://www.linkedin.com/in/boobalan001/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-6 text-light dark:text-dark hover:opacity-80">
                 <LinkedInIcon className="w-full h-auto" />
               </a>
-              <a href="https://alanz-tech.netlify.app" target="_blank" rel="noreferrer" aria-label="Previous Portfolio" className="w-6 text-light dark:text-dark hover:opacity-80">
+              <a href="https://alanz.netlify.app" target="_blank" rel="noreferrer" aria-label="Previous Portfolio" className="w-6 text-light dark:text-dark hover:opacity-80">
                 <GlobeIcon className="w-full h-auto" />
               </a>
               <a href="mailto:boobalanvaithiyanthan1@gmail.com" aria-label="Email" className="w-6 text-light dark:text-dark hover:opacity-80">

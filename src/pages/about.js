@@ -110,7 +110,7 @@ export default function About() {
 
             <div className="grid w-full grid-cols-1 md:grid-cols-8 gap-8 md:gap-10 lg:gap-14 xl:gap-16 items-start">
               {/* Bio Column */}
-              <div className="order-2 md:order-1 md:col-span-4 xl:col-span-3 flex flex-col items-start justify-start text-sm sm:text-base">
+              <div className="order-2 md:order-1 md:col-span-4 xl:col-span-3 flex flex-col items-start justify-start text-left text-sm sm:text-base leading-relaxed">
                 <h2 className="mb-4 text-base sm:text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                   BIOGRAPHY
                 </h2>

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { motion } from "framer-motion";
 
 const quote = {
@@ -21,22 +22,23 @@ const singleWord = {
 };
 
 const AnimatedText = ({ text, className = "" }) => {
+  const words = text.split(" ");
+
   return (
-    <div className="w-full mx-auto py-4 flex items-center justify-center text-center sm:py-2">
+    <div className="w-full mx-auto py-2 flex items-center justify-center text-center">
       <motion.h1
         className={`inline-block w-full text-dark dark:text-light font-bold capitalize text-8xl leading-tight ${className}`}
         variants={quote}
         initial="initial"
         animate="animate"
       >
-        {text.split(" ").map((word, index) => (
-          <motion.span
-            key={word + "-" + index}
-            className="inline-block"
-            variants={singleWord}
-          >
-            {word}&nbsp;
-          </motion.span>
+        {words.map((word, index) => (
+          <Fragment key={word + "-" + index}>
+            <motion.span className="inline-block" variants={singleWord}>
+              {word}
+            </motion.span>
+            {index < words.length - 1 ? " " : ""}
+          </Fragment>
         ))}
       </motion.h1>
     </div>

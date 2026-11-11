@@ -14,11 +14,11 @@ const CertificateRow = ({ title, category, issuer, link }) => {
       viewport={{ once: true }}
       className="w-full p-5 py-6 my-4 rounded-xl flex items-center justify-between gap-4 bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light max-md:flex-col max-md:items-start"
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col text-left">
         <span className="text-xs text-primary font-bold dark:text-primaryDark uppercase">
           {category}
         </span>
-        <h3 className="text-xl font-bold max-sm:text-base mt-1">{title}</h3>
+        <h3 className="text-lg sm:text-xl font-bold mt-1">{title}</h3>
         <span className="text-sm font-medium text-dark/70 dark:text-light/70 mt-0.5">
           {issuer}
         </span>
@@ -27,7 +27,7 @@ const CertificateRow = ({ title, category, issuer, link }) => {
         href={link}
         target="_blank"
         rel="noreferrer"
-        className="shrink-0 px-4 py-2 rounded-lg bg-dark text-light dark:bg-light dark:text-dark font-semibold text-sm hover:opacity-85 transition-opacity"
+        className="shrink-0 w-full md:w-auto text-center px-4 py-2 rounded-lg bg-dark text-light dark:bg-light dark:text-dark font-semibold text-sm hover:opacity-85 transition-opacity"
       >
         View Certificate &rarr;
       </a>
