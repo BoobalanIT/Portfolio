@@ -119,7 +119,7 @@ const SkillsSection = () => {
   return (
     <section
       aria-labelledby="skills-heading"
-      className="relative mt-28 overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-b from-[#f8fbff] via-white to-[#f4f8ff] px-6 py-14 shadow-sm dark:border-slate-800 dark:from-slate-900/90 dark:via-slate-900/70 dark:to-slate-900/90 sm:px-10 sm:py-16"
+      className="relative mt-28 overflow-hidden rounded-3xl border border-blue-200/80 bg-gradient-to-b from-[#eaf2ff] via-[#f2f7ff] to-[#e6f0ff] px-6 py-14 shadow-inner dark:border-slate-800 dark:from-slate-900 dark:via-slate-900/85 dark:to-slate-950 sm:px-10 sm:py-16"
     >
       {/* Subtle light-blue ambient accents */}
       <div
