@@ -5,6 +5,7 @@ import { motion, useInView, useSpring, useMotionValue } from "framer-motion";
 import { useEffect, useRef } from "react";
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
+import SkillsSection from "@/components/SkillsSection";
 import profilePic from "../../public/assets/images/Pic2ss.jpg";
 
 const AnimatedNumbers = ({ value }) => {
@@ -29,21 +30,6 @@ const AnimatedNumbers = ({ value }) => {
   }, [springValue, value]);
 
   return <span ref={ref}>{value}</span>;
-};
-
-const Skill = ({ name, left, top }) => {
-  return (
-    <motion.div
-      style={{ left, top }}
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-2 px-5 shadow-md cursor-pointer absolute -translate-x-1/2 -translate-y-1/2 dark:text-dark dark:bg-light text-xs md:text-sm border border-dark/30 dark:border-light/30 whitespace-nowrap z-10 max-md:py-1 max-md:px-2.5 max-md:text-[10px]"
-      whileHover={{ scale: 1.1 }}
-      initial={{ scale: 0, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1, transition: { duration: 0.6 } }}
-      viewport={{ once: true }}
-    >
-      {name}
-    </motion.div>
-  );
 };
 
 const Details = ({ position, company, companyLink, time, address, bullets = [], docLink, docLabel }) => {
@@ -103,33 +89,6 @@ const Details = ({ position, company, companyLink, time, address, bullets = [], 
     </li>
   );
 };
-
-const skillCategories = [
-  {
-    title: "Frontend",
-    items: ["Angular", "HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap"],
-  },
-  {
-    title: "Backend",
-    items: ["Node.js", "NestJS", "Express.js", "PHP", "REST APIs"],
-  },
-  {
-    title: "Databases",
-    items: ["PostgreSQL", "MongoDB", "MySQL"],
-  },
-  {
-    title: "Web Servers & Deployment",
-    items: ["Nginx", "Apache", "Application Deployment"],
-  },
-  {
-    title: "Tools & CI/CD",
-    items: ["Git", "GitLab CI/CD", "Postman", "pgAdmin"],
-  },
-  {
-    title: "AI & Integration",
-    items: ["Open-source LLM Integration", "Model Context Protocol (MCP)", "AI-Powered Chatbot Integration"],
-  },
-];
 
 export default function About() {
   return (
@@ -213,73 +172,7 @@ export default function About() {
             </div>
 
             {/* Skills Section */}
-            <div className="mt-32">
-              <h2 className="font-bold text-8xl mb-16 w-full text-center max-md:text-6xl max-sm:text-4xl max-md:mb-8">
-                Skills
-              </h2>
-              <div className="w-full h-[65vh] max-h-[550px] my-8 relative flex items-center justify-center rounded-3xl bg-light dark:bg-dark border border-solid border-dark/10 dark:border-light/10 shadow-lg overflow-hidden max-lg:h-[55vh] max-sm:h-[45vh]">
-                <svg
-                  className="absolute inset-0 w-full h-full text-dark/30 dark:text-light/30 pointer-events-none"
-                  viewBox="0 0 1000 600"
-                  preserveAspectRatio="none"
-                >
-                  <ellipse cx="500" cy="300" rx="170" ry="95" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="6 6" />
-                  <ellipse cx="500" cy="300" rx="320" ry="180" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="6 6" />
-                  <ellipse cx="500" cy="300" rx="440" ry="250" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="6 6" />
-                </svg>
-
-                {/* Center Core Skill */}
-                <motion.div
-                  className="flex items-center justify-center rounded-full font-bold bg-primary text-light dark:bg-primaryDark dark:text-dark py-3 px-7 shadow-xl cursor-pointer text-base z-20 max-sm:py-2 max-sm:px-4 max-sm:text-xs"
-                  whileHover={{ scale: 1.1 }}
-                >
-                  Full-Stack
-                </motion.div>
-
-                {/* Inner Ring */}
-                <Skill name="Angular" left="50%" top="34%" />
-                <Skill name="Node.js" left="50%" top="66%" />
-                <Skill name="NestJS" left="33%" top="50%" />
-                <Skill name="PostgreSQL" left="67%" top="50%" />
-
-                {/* Middle Ring */}
-                <Skill name="MCP & LLM" left="50%" top="20%" />
-                <Skill name="PHP" left="76%" top="33%" />
-                <Skill name="MongoDB" left="82%" top="50%" />
-                <Skill name="Express.js" left="68%" top="74%" />
-                <Skill name="REST APIs" left="22%" top="33%" />
-
-                {/* Outer Ring */}
-                <Skill name="GitLab CI/CD" left="12%" top="52%" />
-                <Skill name="Nginx & Apache" left="24%" top="78%" />
-                <Skill name="JavaScript" left="82%" top="76%" />
-                <Skill name="MySQL" left="84%" top="20%" />
-              </div>
-
-              {/* Structured Skill Categories Grid */}
-              <div className="grid grid-cols-3 gap-6 mt-12 max-lg:grid-cols-2 max-sm:grid-cols-1">
-                {skillCategories.map((group) => (
-                  <div
-                    key={group.title}
-                    className="rounded-2xl border border-solid border-dark/25 dark:border-light/25 bg-light dark:bg-dark p-6 shadow-md"
-                  >
-                    <h3 className="text-lg font-bold text-primary dark:text-primaryDark mb-3">
-                      {group.title}
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {group.items.map((item) => (
-                        <span
-                          key={item}
-                          className="px-3 py-1 text-xs font-semibold rounded-full border border-dark/20 dark:border-light/20 bg-dark/5 dark:bg-light/10"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <SkillsSection />
 
             {/* Experience & Education Section */}
             <div className="mt-32">
