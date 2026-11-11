@@ -37,7 +37,7 @@ const Details = ({ position, company, companyLink, time, address, bullets = [], 
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[70%] mx-auto flex flex-col items-start justify-between max-md:w-[88%]"
+      className="my-6 sm:my-8 first:mt-0 last:mb-0 w-full md:w-[88%] lg:w-[75%] mx-auto flex flex-col items-start justify-between"
     >
       <motion.div
         initial={{ y: 50 }}
@@ -46,7 +46,7 @@ const Details = ({ position, company, companyLink, time, address, bullets = [], 
         viewport={{ once: true }}
         className="w-full"
       >
-        <h3 className="capitalize font-bold text-2xl max-sm:text-xl max-xs:text-lg">
+        <h3 className="capitalize font-bold text-lg sm:text-xl md:text-2xl">
           {position}&nbsp;
           {company && (
             companyLink && companyLink !== "#" ? (
@@ -65,11 +65,11 @@ const Details = ({ position, company, companyLink, time, address, bullets = [], 
             )
           )}
         </h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-light/75 max-xs:text-sm block mt-1">
+        <span className="capitalize font-medium text-dark/75 dark:text-light/75 text-xs sm:text-sm md:text-base block mt-1">
           {time} | {address}
         </span>
         {bullets.length > 0 && (
-          <ul className="list-disc pl-5 mt-3 space-y-1.5 font-medium text-dark/90 dark:text-light/90 max-md:text-sm">
+          <ul className="list-disc pl-5 mt-3 space-y-1.5 font-medium text-dark/90 dark:text-light/90 text-sm sm:text-base">
             {bullets.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -102,16 +102,16 @@ export default function About() {
       </Head>
       <Layout>
         <article className="flex w-full flex-col items-center justify-center text-dark dark:text-light">
-          <div className="z-0 inline-block h-full w-full bg-light p-32 dark:bg-dark xl:p-24 max-lg:p-16 max-md:p-12 max-sm:p-8 pt-16">
+          <div className="z-0 inline-block h-full w-full bg-light px-5 py-8 sm:px-8 sm:py-10 md:px-12 lg:px-16 xl:px-24 2xl:px-32 lg:py-16 dark:bg-dark">
             <AnimatedText
               text="Passion Fuels Purpose!"
-              className="mb-16 !text-8xl xl:!text-7xl max-lg:!text-6xl max-md:!text-5xl max-sm:!text-4xl"
+              className="mb-10 md:mb-14 lg:mb-16 !text-4xl sm:!text-5xl md:!text-6xl lg:!text-7xl xl:!text-8xl"
             />
 
-            <div className="grid w-full grid-cols-8 gap-16 max-md:gap-8 max-sm:gap-6">
+            <div className="grid w-full grid-cols-1 md:grid-cols-8 gap-8 md:gap-10 lg:gap-14 xl:gap-16 items-start">
               {/* Bio Column */}
-              <div className="col-span-3 flex flex-col items-start justify-start max-xl:col-span-4 max-md:col-span-8 max-md:order-2">
-                <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+              <div className="order-2 md:order-1 md:col-span-4 xl:col-span-3 flex flex-col items-start justify-start text-sm sm:text-base">
+                <h2 className="mb-4 text-base sm:text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                   BIOGRAPHY
                 </h2>
                 <p className="font-medium">
@@ -126,9 +126,9 @@ export default function About() {
               </div>
 
               {/* Profile Image Box Column */}
-              <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light dark:bg-dark max-xl:col-span-4 max-md:col-span-8 max-md:order-1 max-sm:p-4">
+              <div className="order-1 md:order-2 md:col-span-4 xl:col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-4 sm:p-6 lg:p-8 dark:border-light dark:bg-dark">
                 <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
-                <div className="relative w-full h-[380px] max-md:h-[300px] max-sm:h-[230px] rounded-2xl overflow-hidden">
+                <div className="relative w-full h-[240px] sm:h-[300px] lg:h-[360px] xl:h-[380px] rounded-2xl overflow-hidden">
                   <Image
                     src={profilePic}
                     alt="Boobalan V"
@@ -141,30 +141,30 @@ export default function About() {
               </div>
 
               {/* Stats Column */}
-              <div className="col-span-2 flex flex-col items-end justify-between max-xl:col-span-8 max-xl:flex-row max-xl:items-center max-md:order-3">
-                <div className="flex flex-col items-end justify-center max-xl:items-center">
-                  <span className="inline-block text-7xl font-bold max-md:text-6xl max-sm:text-5xl max-xs:text-4xl">
+              <div className="order-3 md:col-span-8 xl:col-span-2 grid grid-cols-3 gap-4 xl:flex xl:flex-col xl:items-end xl:justify-between xl:h-full">
+                <div className="flex flex-col items-center xl:items-end justify-center">
+                  <span className="inline-block text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
                     <AnimatedNumbers value={2} />+
                   </span>
-                  <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 max-xl:text-center max-md:text-base max-sm:text-xs">
+                  <h2 className="text-xs sm:text-base md:text-lg xl:text-xl font-medium capitalize text-dark/75 dark:text-light/75 text-center xl:text-right">
                     Years Experience
                   </h2>
                 </div>
 
-                <div className="flex flex-col items-end justify-center max-xl:items-center">
-                  <span className="inline-block text-7xl font-bold max-md:text-6xl max-sm:text-5xl max-xs:text-4xl">
+                <div className="flex flex-col items-center xl:items-end justify-center">
+                  <span className="inline-block text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
                     <AnimatedNumbers value={80} />%
                   </span>
-                  <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 max-xl:text-center max-md:text-base max-sm:text-xs">
+                  <h2 className="text-xs sm:text-base md:text-lg xl:text-xl font-medium capitalize text-dark/75 dark:text-light/75 text-center xl:text-right">
                     B.Tech IT (First Class)
                   </h2>
                 </div>
 
-                <div className="flex flex-col items-end justify-center max-xl:items-center">
-                  <span className="inline-block text-7xl font-bold max-md:text-6xl max-sm:text-5xl max-xs:text-4xl">
+                <div className="flex flex-col items-center xl:items-end justify-center">
+                  <span className="inline-block text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
                     <AnimatedNumbers value={6} />+
                   </span>
-                  <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 max-xl:text-center max-md:text-base max-sm:text-xs">
+                  <h2 className="text-xs sm:text-base md:text-lg xl:text-xl font-medium capitalize text-dark/75 dark:text-light/75 text-center xl:text-right">
                     Credentials &amp; Award
                   </h2>
                 </div>
@@ -175,11 +175,11 @@ export default function About() {
             <SkillsSection />
 
             {/* Experience & Education Section */}
-            <div className="mt-32">
-              <h2 className="font-bold text-8xl mb-16 w-full text-center max-md:text-6xl max-sm:text-4xl">
+            <div className="mt-20 md:mt-28 lg:mt-32">
+              <h2 className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-10 md:mb-16 w-full text-center">
                 Experience &amp; Education
               </h2>
-              <div className="w-[80%] mx-auto relative max-lg:w-[92%] max-md:w-full">
+              <div className="w-full lg:w-[92%] xl:w-[80%] mx-auto relative">
                 <ul className="w-full flex flex-col items-start justify-between">
                   <Details
                     position="Software Developer"
@@ -221,13 +221,13 @@ export default function About() {
             </div>
 
             {/* Recognition & Credentials Teaser */}
-            <div className="mt-32">
-              <h2 className="font-bold text-8xl mb-16 w-full text-center max-md:text-6xl max-sm:text-4xl">
+            <div className="mt-20 md:mt-28 lg:mt-32">
+              <h2 className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-10 md:mb-16 w-full text-center">
                 Awards &amp; Certifications
               </h2>
-              <div className="grid grid-cols-2 gap-8 w-[85%] mx-auto max-md:grid-cols-1 max-sm:w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full lg:w-[92%] xl:w-[85%] mx-auto">
                 {/* Versatile Rockstar Award */}
-                <div className="col-span-2 max-md:col-span-1 rounded-2xl border-2 border-solid border-dark bg-light p-6 dark:border-light dark:bg-dark shadow-xl flex items-center justify-between gap-6 max-md:flex-col max-md:text-center">
+                <div className="col-span-1 md:col-span-2 rounded-2xl border-2 border-solid border-dark bg-light p-5 sm:p-6 dark:border-light dark:bg-dark shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                   <div>
                     <span className="text-primary font-semibold dark:text-primaryDark text-sm uppercase">
                       EXCELLENCE AWARD &bull; 2026

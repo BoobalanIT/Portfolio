@@ -22,25 +22,25 @@ export default function Contact() {
       </Head>
       <Layout>
         <article className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
-          <div className="z-0 inline-block h-full w-full bg-light p-32 dark:bg-dark xl:p-24 max-lg:p-16 max-md:p-12 max-sm:p-6 max-xs:p-3 pt-16">
+          <div className="z-0 inline-block h-full w-full bg-light px-5 py-8 sm:px-8 sm:py-10 md:px-12 lg:px-16 xl:px-24 2xl:px-32 lg:py-16 dark:bg-dark">
             <AnimatedText
               text="Let's Build Something Great!"
-              className="mb-16 !text-8xl xl:!text-7xl max-lg:!text-6xl max-md:!text-5xl max-sm:!text-3xl max-xs:!text-2xl"
+              className="mb-10 md:mb-14 lg:mb-16 !text-3xl sm:!text-5xl md:!text-6xl lg:!text-7xl xl:!text-8xl"
             />
 
-            <div className="grid grid-cols-12 gap-16 max-md:gap-8 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 w-full">
               {/* Contact Info Cards */}
-              <div className="col-span-5 max-md:col-span-12 flex flex-col gap-6">
-                <h2 className="text-3xl font-bold dark:text-light">
+              <div className="lg:col-span-5 flex flex-col gap-5 sm:gap-6">
+                <h2 className="text-2xl sm:text-3xl font-bold dark:text-light">
                   Contact Information
                 </h2>
-                <p className="font-medium text-dark/80 dark:text-light/80">
+                <p className="font-medium text-sm sm:text-base text-dark/80 dark:text-light/80">
                   Feel free to reach out for full-stack software development opportunities, backend/API architecture, AI &amp; MCP integrations, or freelance collaborations.
                 </p>
 
                 {/* Email Card */}
-                <div className="p-6 rounded-2xl border border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-md flex items-center gap-4">
-                  <div className="w-12 h-12 shrink-0 rounded-full bg-dark text-light dark:bg-light dark:text-dark flex items-center justify-center text-xl font-bold">
+                <div className="p-5 sm:p-6 rounded-2xl border border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-md flex items-center gap-4">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-full bg-dark text-light dark:bg-light dark:text-dark flex items-center justify-center text-lg sm:text-xl font-bold">
                     &#9993;
                   </div>
                   <div className="min-w-0">
@@ -49,7 +49,7 @@ export default function Contact() {
                     </span>
                     <a
                       href="mailto:boobalanvaithiyanthan1@gmail.com"
-                      className="block text-base sm:text-lg font-bold hover:underline dark:text-light break-all"
+                      className="block text-sm sm:text-base lg:text-lg font-bold hover:underline dark:text-light break-all"
                     >
                       boobalanvaithiyanthan1@gmail.com
                     </a>
@@ -57,8 +57,8 @@ export default function Contact() {
                 </div>
 
                 {/* Phone Card */}
-                <div className="p-6 rounded-2xl border border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-md flex items-center gap-4">
-                  <div className="w-12 h-12 shrink-0 rounded-full bg-dark text-light dark:bg-light dark:text-dark flex items-center justify-center text-xl font-bold">
+                <div className="p-5 sm:p-6 rounded-2xl border border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-md flex items-center gap-4">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-full bg-dark text-light dark:bg-light dark:text-dark flex items-center justify-center text-lg sm:text-xl font-bold">
                     &#9742;
                   </div>
                   <div>
@@ -67,7 +67,7 @@ export default function Contact() {
                     </span>
                     <a
                       href="tel:+919025006329"
-                      className="block text-lg font-bold hover:underline dark:text-light"
+                      className="block text-base sm:text-lg font-bold hover:underline dark:text-light"
                     >
                       +91 9025006329
                     </a>
@@ -75,22 +75,22 @@ export default function Contact() {
                 </div>
 
                 {/* Location Card */}
-                <div className="p-6 rounded-2xl border border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-md flex items-center gap-4">
-                  <div className="w-12 h-12 shrink-0 rounded-full bg-dark text-light dark:bg-light dark:text-dark flex items-center justify-center text-xl font-bold">
+                <div className="p-5 sm:p-6 rounded-2xl border border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-md flex items-center gap-4">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-full bg-dark text-light dark:bg-light dark:text-dark flex items-center justify-center text-lg sm:text-xl font-bold">
                     &#128205;
                   </div>
                   <div>
                     <span className="text-xs font-semibold text-primary dark:text-primaryDark uppercase">
                       LOCATION
                     </span>
-                    <p className="text-lg font-bold dark:text-light">
+                    <p className="text-base sm:text-lg font-bold dark:text-light">
                       Chennai, Tamil Nadu, India
                     </p>
                   </div>
                 </div>
 
                 {/* Social & Resume Card */}
-                <div className="p-6 rounded-2xl border-2 border-solid border-primary dark:border-primaryDark bg-primary/5 dark:bg-primaryDark/10 flex flex-col gap-3">
+                <div className="p-5 sm:p-6 rounded-2xl border-2 border-solid border-primary dark:border-primaryDark bg-primary/5 dark:bg-primaryDark/10 flex flex-col gap-3">
                   <span className="text-xs font-bold text-primary dark:text-primaryDark uppercase">
                     PROFILES &amp; RESUME
                   </span>
@@ -124,7 +124,7 @@ export default function Contact() {
               </div>
 
               {/* Contact Form */}
-              <div className="col-span-7 max-md:col-span-12 p-8 rounded-2xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-xl">
+              <div className="lg:col-span-7 p-5 sm:p-8 rounded-2xl border-2 border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-xl">
                 <h3 className="text-2xl font-bold dark:text-light mb-6">
                   Send Me a Message
                 </h3>

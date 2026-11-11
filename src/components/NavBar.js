@@ -113,7 +113,7 @@ const NavBar = () => {
   const handleClick = () => setIsOpen(!isOpen);
 
   return (
-    <header className="w-full flex items-center justify-between px-32 py-8 font-medium dark:text-light max-lg:px-16 max-md:px-12 max-sm:px-6 relative z-10">
+    <header className="w-full flex items-center justify-between px-5 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 py-6 md:py-8 font-medium dark:text-light relative z-10">
       {/* Hamburger Button (Mobile / Tablet) */}
       <button
         className="flex-col items-center justify-center hidden max-lg:flex z-40 p-2 focus:outline-none"
@@ -156,32 +156,32 @@ const NavBar = () => {
 
       {/* Desktop Nav */}
       <div className="w-full flex justify-between items-center max-lg:hidden">
-        <nav className="flex items-center justify-center gap-1">
-          <CustomLink href="/" title="Home" className="mr-4" />
-          <CustomLink href="/about" title="About" className="mx-4" />
-          <CustomLink href="/projects" title="Projects" className="mx-4" />
-          <CustomLink href="/articles" title="Credentials" className="mx-4" />
-          <CustomLink href="/contact" title="Contact" className="ml-4" />
+        <nav className="flex items-center justify-center gap-5 xl:gap-8">
+          <CustomLink href="/" title="Home" />
+          <CustomLink href="/about" title="About" />
+          <CustomLink href="/projects" title="Projects" />
+          <CustomLink href="/articles" title="Credentials" />
+          <CustomLink href="/contact" title="Contact" />
         </nav>
 
-        <nav className="flex items-center justify-center flex-wrap gap-1">
-          <a href="https://github.com/BoobalanIT" target="_blank" rel="noreferrer" aria-label="GitHub" className="w-6 mx-3 hover:-translate-y-0.5 transition-transform">
+        <nav className="flex items-center justify-center flex-wrap gap-4 xl:gap-5">
+          <a href="https://github.com/BoobalanIT" target="_blank" rel="noreferrer" aria-label="GitHub" className="w-6 hover:-translate-y-0.5 transition-transform">
             <GithubIcon className="w-full h-auto" />
           </a>
-          <a href="https://www.linkedin.com/in/boobalan001/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-6 mx-3 hover:-translate-y-0.5 transition-transform">
+          <a href="https://www.linkedin.com/in/boobalan001/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-6 hover:-translate-y-0.5 transition-transform">
             <LinkedInIcon className="w-full h-auto" />
           </a>
-          <a href="https://alanz-tech.netlify.app" target="_blank" rel="noreferrer" aria-label="Previous Portfolio" className="w-6 mx-3 hover:-translate-y-0.5 transition-transform">
+          <a href="https://alanz-tech.netlify.app" target="_blank" rel="noreferrer" aria-label="Previous Portfolio" className="w-6 hover:-translate-y-0.5 transition-transform">
             <GlobeIcon className="w-full h-auto" />
           </a>
-          <a href="mailto:boobalanvaithiyanthan1@gmail.com" aria-label="Email" className="w-6 mx-3 hover:-translate-y-0.5 transition-transform">
+          <a href="mailto:boobalanvaithiyanthan1@gmail.com" aria-label="Email" className="w-6 hover:-translate-y-0.5 transition-transform">
             <MailIcon className="w-full h-auto" />
           </a>
 
           {/* Desktop Theme Switcher */}
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1 ${
+            className={`w-6 h-6 ease flex items-center justify-center rounded-full p-1 ${
               mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
             }`}
             aria-label="Toggle theme"
@@ -196,10 +196,10 @@ const NavBar = () => {
       </div>
 
       {/* Center Logo */}
-      <div className="absolute left-[50%] top-4 -translate-x-1/2 max-sm:top-3">
+      <div className="absolute left-[50%] top-3 sm:top-4 -translate-x-1/2">
         <Link
           href="/"
-          className="flex items-center justify-center rounded-full w-16 h-16 max-sm:w-12 max-sm:h-12 bg-dark text-white dark:border-2 dark:border-solid dark:border-light text-2xl max-sm:text-lg font-bold shadow-md"
+          className="flex items-center justify-center rounded-full w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-dark text-white dark:border-2 dark:border-solid dark:border-light text-lg sm:text-xl lg:text-2xl font-bold shadow-md"
         >
           BV
         </Link>

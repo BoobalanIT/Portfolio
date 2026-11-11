@@ -14,14 +14,14 @@ const FeaturedProject = ({ type, title, summary, link, github, img, imgAlt, tags
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="w-full flex items-center justify-between gap-10 rounded-3xl border border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark max-lg:flex-col max-lg:p-8 max-xs:p-4"
+      className="w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10 rounded-3xl border border-solid border-dark bg-light p-5 sm:p-8 lg:p-10 xl:p-12 shadow-2xl dark:border-light dark:bg-dark"
     >
       {img && (
         <a
           href={github || link || "#"}
           target="_blank"
           rel="noreferrer"
-          className="w-1/2 max-lg:w-full cursor-pointer overflow-hidden rounded-2xl border border-dark/20 dark:border-light/20 bg-white flex items-center justify-center"
+          className="w-full lg:w-1/2 cursor-pointer overflow-hidden rounded-2xl border border-dark/20 dark:border-light/20 bg-white flex items-center justify-center"
         >
           <Image
             src={img}
@@ -32,14 +32,14 @@ const FeaturedProject = ({ type, title, summary, link, github, img, imgAlt, tags
         </a>
       )}
 
-      <div className={`${img ? "w-1/2 max-lg:w-full" : "w-full"} flex flex-col items-start justify-between`}>
-        <span className="text-primary font-semibold text-xl dark:text-primaryDark max-xs:text-base">
+      <div className={`${img ? "w-full lg:w-1/2" : "w-full"} flex flex-col items-start justify-between`}>
+        <span className="text-primary font-semibold text-base sm:text-lg lg:text-xl dark:text-primaryDark">
           {type}
         </span>
-        <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light max-sm:text-2xl">
+        <h2 className="my-2 w-full text-left text-2xl sm:text-3xl lg:text-4xl font-bold dark:text-light">
           {title}
         </h2>
-        <p className="my-2 font-medium text-dark dark:text-light max-sm:text-sm">
+        <p className="my-2 font-medium text-dark dark:text-light text-sm sm:text-base">
           {summary}
         </p>
 
@@ -100,7 +100,7 @@ const Project = ({ title, type, summary, img, imgAlt, github, tags = [] }) => {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="w-full h-full flex flex-col items-start justify-between rounded-2xl border border-solid border-dark bg-light p-6 relative dark:border-light dark:bg-dark shadow-lg max-xs:p-4"
+      className="w-full h-full flex flex-col items-start justify-between rounded-2xl border border-solid border-dark bg-light p-5 sm:p-6 relative dark:border-light dark:bg-dark shadow-lg"
     >
       <div className="w-full">
         {img && (
@@ -163,13 +163,13 @@ export default function Projects() {
       </Head>
       <Layout>
         <article className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
-          <div className="z-0 inline-block h-full w-full bg-light p-32 dark:bg-dark xl:p-24 max-lg:p-16 max-md:p-12 max-sm:p-6 max-xs:p-3 pt-16">
+          <div className="z-0 inline-block h-full w-full bg-light px-5 py-8 sm:px-8 sm:py-10 md:px-12 lg:px-16 xl:px-24 2xl:px-32 lg:py-16 dark:bg-dark">
             <AnimatedText
               text="Code, Systems & AI In Action!"
-              className="mb-16 !text-8xl xl:!text-7xl max-lg:!text-6xl max-md:!text-5xl max-sm:!text-3xl max-xs:!text-2xl"
+              className="mb-10 md:mb-14 lg:mb-16 !text-3xl sm:!text-5xl md:!text-6xl lg:!text-7xl xl:!text-8xl"
             />
 
-            <div className="grid grid-cols-12 gap-16 gap-y-20 max-xl:gap-x-10 max-lg:gap-x-8 max-md:gap-y-14 max-sm:gap-x-0">
+            <div className="grid grid-cols-12 gap-y-10 md:gap-8 md:gap-y-14 lg:gap-12 lg:gap-y-16">
               {/* 1. Datalytics SaaS Product */}
               <div className="col-span-12">
                 <FeaturedProject

@@ -37,54 +37,54 @@ export default function Home() {
         />
       </Head>
       <Layout>
-        <article className="relative flex min-h-[calc(100vh-6rem)] items-center text-dark dark:text-light max-md:min-h-fit max-md:items-start">
-          <div className="z-0 inline-block w-full bg-light px-32 py-12 dark:bg-dark max-xl:px-24 max-lg:px-16 max-md:px-12 max-sm:px-8 max-md:py-10">
-            <div className="flex w-full items-center justify-between max-md:flex-col">
+        <article className="relative flex min-h-[calc(100vh-6rem)] items-center text-dark dark:text-light max-lg:min-h-fit max-lg:items-start">
+          <div className="z-0 inline-block w-full bg-light px-5 py-8 sm:px-8 sm:py-10 md:px-12 lg:px-16 xl:px-24 2xl:px-32 lg:py-12 dark:bg-dark">
+            <div className="flex w-full flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10">
               {/* Profile Image */}
-              <div className="w-1/2 max-md:w-full max-md:mb-8 flex items-center justify-center">
-                <div className="relative w-[480px] h-[480px] xl:w-[360px] xl:h-[360px] max-md:w-[280px] max-md:h-[280px] max-sm:w-[220px] max-sm:h-[220px] rounded-full overflow-hidden border-4 border-dark dark:border-light shadow-2xl">
+              <div className="w-full lg:w-1/2 flex items-center justify-center">
+                <div className="relative w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[420px] xl:h-[420px] rounded-full overflow-hidden border-4 border-dark dark:border-light shadow-2xl">
                   <Image
                     src={profilePic}
                     alt="Boobalan V"
                     fill
                     className="object-cover object-top"
-                    sizes="(max-width: 768px) 280px, 480px"
+                    sizes="(max-width: 640px) 220px, (max-width: 1024px) 300px, 420px"
                     priority
                   />
                 </div>
               </div>
 
               {/* Text Side */}
-              <div className="flex w-1/2 flex-col items-center self-center max-lg:w-full max-lg:text-center">
-                <span className="self-start max-lg:self-center text-sm font-bold uppercase tracking-widest text-primary dark:text-primaryDark mb-2">
+              <div className="flex w-full lg:w-1/2 flex-col items-center lg:items-start text-center lg:text-left self-center">
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary dark:text-primaryDark mb-2">
                   Software Developer &bull; Full-Stack Developer
                 </span>
                 <AnimatedText
                   text="Building Full-Stack & AI-Powered Solutions."
-                  className="!text-left !text-6xl xl:!text-5xl max-lg:!text-center max-lg:!text-6xl max-md:!text-5xl max-sm:!text-3xl"
+                  className="!text-3xl sm:!text-4xl md:!text-5xl xl:!text-6xl !text-center lg:!text-left"
                 />
-                <p className="my-4 text-base font-medium max-md:text-sm max-sm:!text-xs">
+                <p className="my-4 text-sm sm:text-base font-medium max-w-2xl">
                   Hi, I&apos;m <strong>Boobalan V</strong>, a Software Developer with nearly 2 years of experience building web applications, REST APIs, and database-driven platforms using <strong>Angular, Node.js, NestJS, PHP, PostgreSQL, and MongoDB</strong> &mdash; including AI-powered business intelligence with <strong>Model Context Protocol (MCP)</strong> and open-source LLM integration.
                 </p>
-                <div className="mt-2 flex items-center self-start max-lg:self-center gap-4 flex-wrap">
+                <div className="mt-2 flex items-center justify-center lg:justify-start gap-3 sm:gap-4 flex-wrap">
                   <a
                     href="/assets/docs/Boobalan%20V%20%E2%80%94%20Resume.pdf"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center rounded-lg border-2 border-solid border-dark bg-dark p-2.5 px-6 text-lg font-semibold capitalize text-light hover:bg-light hover:text-dark dark:bg-light dark:text-dark dark:border-light dark:hover:bg-dark dark:hover:text-light dark:hover:border-light max-md:p-2 max-md:px-4 max-md:text-base"
+                    className="flex items-center rounded-lg border-2 border-solid border-dark bg-dark px-4 py-2 sm:px-6 sm:py-2.5 text-base sm:text-lg font-semibold capitalize text-light hover:bg-light hover:text-dark dark:bg-light dark:text-dark dark:border-light dark:hover:bg-dark dark:hover:text-light dark:hover:border-light transition-colors"
                   >
                     Resume
                     <DownloadIcon />
                   </a>
                   <Link
                     href="/projects"
-                    className="rounded-lg border-2 border-solid border-dark px-5 py-2.5 text-lg font-semibold text-dark hover:bg-dark hover:text-light dark:border-light dark:text-light dark:hover:bg-light dark:hover:text-dark max-md:p-2 max-md:px-4 max-md:text-base transition-colors"
+                    className="rounded-lg border-2 border-solid border-dark px-4 py-2 sm:px-5 sm:py-2.5 text-base sm:text-lg font-semibold text-dark hover:bg-dark hover:text-light dark:border-light dark:text-light dark:hover:bg-light dark:hover:text-dark transition-colors"
                   >
                     Projects
                   </Link>
                   <Link
                     href="/contact"
-                    className="text-lg font-medium capitalize text-dark underline dark:text-light max-md:text-base"
+                    className="text-base sm:text-lg font-medium capitalize text-dark underline dark:text-light px-1"
                   >
                     Contact
                   </Link>
@@ -97,7 +97,7 @@ export default function Home() {
           <HireMe />
 
           {/* Light Bulb decoration */}
-          <div className="absolute right-8 bottom-8 inline-block w-24 max-md:hidden">
+          <div className="absolute right-8 bottom-8 hidden lg:inline-block w-20 xl:w-24">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/svgs/miscellaneous_icons_1.svg"

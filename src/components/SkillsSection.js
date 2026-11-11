@@ -35,18 +35,27 @@ const BrandIcon = ({ icon, monochrome = false }) => (
 const RestApiIcon = () => (
   <svg
     viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.8"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="h-12 w-12 text-sky-500 dark:text-sky-400"
+    className="h-12 w-12"
     aria-hidden="true"
   >
-    <path d="M6.5 19a4.5 4.5 0 0 1-.42-8.98 6 6 0 0 1 11.7-1.5A4 4 0 0 1 18.5 19H6.5Z" fill="currentColor" fillOpacity="0.12" />
-    <path d="M9.5 13.5 8 15l1.5 1.5" />
-    <path d="M14.5 13.5 16 15l-1.5 1.5" />
-    <path d="M12.5 12.5 11.5 17" />
+    <defs>
+      <linearGradient id="restApiCloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#60A5FA" />
+        <stop offset="100%" stopColor="#2563EB" />
+      </linearGradient>
+    </defs>
+    <path
+      d="M6.5 19h11.25a4.25 4.25 0 0 0 .56-8.46A5.75 5.75 0 0 0 7.12 8.76 4.75 4.75 0 0 0 6.5 19Z"
+      fill="url(#restApiCloudGrad)"
+    />
+    <g stroke="#ffffff" strokeWidth="1.9" strokeLinecap="round">
+      <line x1="12" y1="9.9" x2="12" y2="16.5" />
+      <line x1="8.7" y1="13.2" x2="15.3" y2="13.2" />
+      <line x1="9.7" y1="10.9" x2="14.3" y2="15.5" />
+      <line x1="14.3" y1="10.9" x2="9.7" y2="15.5" />
+    </g>
+    <circle cx="12" cy="13.2" r="2.2" fill="#ffffff" />
+    <circle cx="12" cy="13.2" r="1.0" fill="#2563EB" />
   </svg>
 );
 
