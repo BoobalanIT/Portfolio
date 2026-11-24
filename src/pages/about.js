@@ -118,7 +118,7 @@ export default function About() {
                   Hi, I&apos;m <strong>Boobalan V</strong>, a Software Developer &amp; Full-Stack Developer based in Chennai, India, with nearly 2 years of professional experience developing and maintaining web applications, APIs, databases, and application deployments.
                 </p>
                 <p className="my-4 font-medium">
-                  Currently at <strong>Megam Technologies</strong>, I work on two core enterprise platforms: <strong>Datalytics</strong> (an AI-powered business intelligence SaaS where I also developed the <strong>Datalytics — UI Component Library &amp; Embed SDK</strong> featuring an independent Angular visualization library and an in-repo Embed SDK with a dedicated package.json, both published to npm) and <strong>LeatherLink TanPro 11.0 (TMS)</strong> (a 300+ table multi-tenant industrial ERP built with PHP, PostgreSQL schema-per-tenant isolation, MongoDB audit logs, and Apache PHP-FPM deployment).
+                  Currently at <strong>Megam Technologies</strong>, I work on core enterprise solutions: <strong>Datalytics</strong> (an AI-powered business intelligence platform where I also developed the <strong>Datalytics — UI Component Library &amp; Embed SDK</strong> featuring an independent Angular visualization library and an in-repo Embed SDK with a dedicated package.json, both published to npm) and <strong>LeatherLink TanPro 11.0 — Tannery Management System (TMS)</strong> (a 300+ table tannery management application built with PHP, PostgreSQL schema-per-tenant architecture, MongoDB audit logs, and Apache PHP-FPM deployment).
                 </p>
                 <p className="font-medium">
                   With hands-on expertise across <strong>Angular, Node.js, NestJS, PHP, PostgreSQL, MongoDB, Nginx, Apache, and mPDF</strong>, I focus on building reliable, scalable software that turns complex operational workflows into clean user experiences.
@@ -187,12 +187,12 @@ export default function About() {
                     time="December 2024 – Present"
                     address="Chennai, India"
                     bullets={[
-                      "Datalytics Platform: Developed frontend features in Angular and backend REST APIs in Node.js/NestJS; integrated open-source LLMs via Model Context Protocol (MCP) for conversational analytics, routed via Nginx reverse proxy.",
-                      "Datalytics — UI Component Library & Embed SDK: Developed an independent, reusable Angular component library (charts, KPI widgets, dynamic tables) and an in-repo Embed SDK with dedicated package.json; managed independent versioning and npm publishing for both.",
-                      "LeatherLink TanPro 11.0 (TMS): Developed and maintained core ERP features across 300+ database tables for manufacturing operations, inventory, supply chain, and billing using PHP, PostgreSQL, and MongoDB.",
-                      "Implemented PostgreSQL schema-per-tenant isolation for multi-tenant data privacy, and used MongoDB for audit trails and approval tracking.",
-                      "Wrote and optimized SQL queries, views, materialized views, functions, and triggers for production batch tracking and inventory calculations.",
-                      "Built automated PDF generation for delivery challans, invoices, and job cards using mPDF; deployed and maintained the application on Apache with PHP-FPM.",
+                      "Datalytics Platform: Developed responsive frontend components using Angular and integrated REST APIs built with Node.js and NestJS; integrated an open-source Large Language Model (LLM) with Model Context Protocol (MCP) for natural language querying.",
+                      "Datalytics — UI Component Library & Embed SDK: Developed an independent, reusable Angular component library (charts, KPI widgets, tables, report settings) and an in-repo Embed SDK with dedicated package.json; managed independent versioning and npm releases for both.",
+                      "LeatherLink TanPro 11.0 — Tannery Management System (TMS): Migrated PHP servers and configured deployment environments; developed core ERP modules across 300+ database tables using PHP, PostgreSQL schema-per-tenant architecture, and MongoDB audit logs.",
+                      "Optimized database queries, triggers, views, and functions; built automated mPDF generation for delivery challans and invoices; configured Apache, PHP-FPM, and cron job automation.",
+                      "Developed and optimized SQL queries, views, materialized views, functions, and triggers to support application workflows and database operations.",
+                      "Implemented automated PDF generation using mPDF for delivery challans, GST invoices, and job cards; deployed and maintained the application using Apache and PHP-FPM.",
                     ]}
                   />
                   <Details

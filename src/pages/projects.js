@@ -183,10 +183,10 @@ export default function Projects() {
                   title="Datalytics — AI-Powered Business Intelligence Platform"
                   summary="Business Intelligence and Analytics platform featuring natural-language data queries via open-source LLM, custom Model Context Protocol (MCP) server tools, automated reporting, and Nginx reverse proxy architecture."
                   highlights={[
-                    "Developed frontend user interfaces in Angular and backend REST APIs in Node.js / NestJS for business analytics dashboards.",
-                    "Integrated an open-source large language model (LLM) using Model Context Protocol (MCP), enabling users to ask business questions in natural language and receive instant data insights.",
-                    "Built dynamic report and dashboard generation to monitor operational metrics such as working hours, task progress, and completed issues.",
-                    "Configured Nginx reverse proxy routing between the Angular client and backend API services; managed GitLab CI/CD pipelines for automated testing and deployments.",
+                    "Developed responsive frontend components using Angular and integrated REST APIs built with Node.js and NestJS.",
+                    "Integrated an open-source Large Language Model (LLM) with Model Context Protocol (MCP), enabling users to query business data using natural language and receive AI-generated insights.",
+                    "Developed interactive dashboards and reporting features to monitor key business metrics, including employee work hours, project progress, and issue tracking.",
+                    "Configured Nginx as a reverse proxy to route frontend requests and backend API traffic, and managed GitLab CI/CD pipelines for application deployment.",
                   ]}
                   tags={["Angular", "Node.js", "NestJS", "PostgreSQL", "Nginx (Reverse Proxy)", "Model Context Protocol (MCP)", "Open-Source LLM", "GitLab CI/CD", "SaaS"]}
                   note="Proprietary, built at Megam Technologies"
@@ -201,7 +201,7 @@ export default function Projects() {
                   title="Datalytics — UI Component Library & Embed SDK"
                   summary="Independent, reusable Angular UI component library and client Embed SDK developed for the Datalytics enterprise platform, enabling modular data visualization and secure third-party dashboard embedding."
                   highlights={[
-                    "UI Component Library: Developed an independent, reusable Angular component library featuring interactive charts (bar, line, area, and pie), KPI widgets with trend indicators, and data tables with sorting, filtering, and pagination. Maintained independent versioning and published the package to npm.",
+                    "UI Component Library: Developed an independent, reusable Angular component library featuring interactive charts (bar, line, area, and pie), KPI widgets, data tables with sorting, filtering, and pagination, and report configuration settings. Maintained independent versioning and published the package to npm.",
                     "Embed SDK: Developed a reusable Embed SDK within the main application repository, with a dedicated package.json and independent npm publishing configuration. Enabled third-party applications to embed live analytics dashboards using token-based authentication.",
                     "Package Management & Integration: Managed independent versioning and npm releases for both packages, and integrated updated library versions into the main Datalytics SaaS platform.",
                     "Architecture & Third-Party Integration: Designed clean TypeScript APIs, responsive iframe container messaging, and efficient DOM rendering for seamless external embedding.",
@@ -212,20 +212,23 @@ export default function Projects() {
                 />
               </div>
 
-              {/* 3. ERP Project — LeatherLink TanPro 11.0 (TMS) */}
+              {/* 3. LeatherLink TanPro 11.0 — Tannery Management System (TMS) */}
               <div className="col-span-12">
                 <FeaturedProject
-                  type="Enterprise Multi-Tenant ERP @ Megam Technologies"
-                  title="LeatherLink TanPro 11.0 (TMS): Multi-Tenant Industrial ERP"
-                  summary="Multi-tenant enterprise ERP system managing manufacturing, inventory, supply chain, and billing across 300+ database tables."
+                  type="Enterprise Application @ Megam Technologies"
+                  title="LeatherLink TanPro 11.0 — Tannery Management System (TMS)"
+                  summary="Tannery management enterprise application supporting day-to-day tannery business operations across 300+ database tables."
                   highlights={[
-                    "Developed and maintained core ERP modules across 300+ database tables covering manufacturing operations, inventory, supply chain, and billing using PHP and PostgreSQL.",
-                    "Implemented schema-per-tenant data isolation in PostgreSQL for customer data security, paired with MongoDB for audit logs and approval workflows.",
-                    "Wrote and optimized SQL queries, views, materialized views, functions, and triggers to handle production batch tracking and inventory updates.",
-                    "Built automated PDF generation for delivery challans, invoices, and job cards using mPDF.",
-                    "Deployed and maintained the application on Apache with PHP-FPM, configuring virtual hosts, process pools, and server environments.",
+                    "Migrated PHP applications and servers, configured deployment environments, and performed application maintenance, bug fixes, and feature enhancements.",
+                    "Developed and maintained core application modules using PHP and PostgreSQL, supporting tannery business operations across 300+ database tables.",
+                    "Implemented PostgreSQL schema-per-tenant architecture to maintain separate database schemas for different enterprise clients.",
+                    "Implemented and maintained MongoDB-based audit logging and multi-level approval workflows to track business transactions.",
+                    "Developed and optimized SQL queries, views, materialized views, functions, and triggers to support application workflows and database operations.",
+                    "Implemented automated PDF generation using mPDF for delivery challans, GST invoices, and job cards.",
+                    "Configured and maintained Apache and PHP-FPM environments, including server setup, deployment, and environment configuration for multiple client applications.",
+                    "Configured and maintained cron jobs to automate scheduled application tasks and background processes.",
                   ]}
-                  tags={["PHP", "PostgreSQL (Schema-Per-Tenant)", "MongoDB (Audit Logs)", "Apache & PHP-FPM", "mPDF", "SQL Queries & Triggers", "Batch Tracking", "ERP"]}
+                  tags={["PHP", "PostgreSQL (Schema-Per-Tenant)", "MongoDB (Audit Logs)", "Apache & PHP-FPM", "mPDF", "Cron Jobs", "Server Migration", "Tannery Management", "Enterprise"]}
                   note="Proprietary, built at Megam Technologies"
                 />
               </div>
