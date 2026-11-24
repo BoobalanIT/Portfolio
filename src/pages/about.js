@@ -118,10 +118,10 @@ export default function About() {
                   Hi, I&apos;m <strong>Boobalan V</strong>, a Software Developer &amp; Full-Stack Developer based in Chennai, India, with nearly 2 years of professional experience developing and maintaining web applications, APIs, databases, and application deployments.
                 </p>
                 <p className="my-4 font-medium">
-                  Currently at <strong>Megam Technologies</strong>, I contribute to <strong>Datalytics</strong> &mdash; an AI-powered business intelligence platform featuring conversational data analysis, <strong>Model Context Protocol (MCP)</strong> tools, open-source LLM integration, and dynamic report and dashboard generation &mdash; alongside enterprise ERP systems built with <strong>PHP, jQuery, JavaScript, and PostgreSQL</strong>.
+                  Currently at <strong>Megam Technologies</strong>, I work on two core enterprise platforms: <strong>Datalytics</strong> (an AI-powered business intelligence SaaS where I also developed the <strong>Datalytics — UI Component Library &amp; Embed SDK</strong> featuring an independent Angular visualization library and an in-repo Embed SDK with a dedicated package.json, both published to npm) and <strong>LeatherLink TanPro 11.0 (TMS)</strong> (a 300+ table multi-tenant industrial ERP built with PHP, PostgreSQL schema-per-tenant isolation, MongoDB audit logs, and Apache PHP-FPM deployment).
                 </p>
                 <p className="font-medium">
-                  With hands-on expertise in <strong>Angular, Node.js, NestJS, SQL database objects, Nginx, Apache, and GitLab CI/CD</strong>, I focus on building reliable, scalable software that turns complex operational workflows into clean user experiences.
+                  With hands-on expertise across <strong>Angular, Node.js, NestJS, PHP, PostgreSQL, MongoDB, Nginx, Apache, and mPDF</strong>, I focus on building reliable, scalable software that turns complex operational workflows into clean user experiences.
                 </p>
               </div>
 
@@ -144,10 +144,10 @@ export default function About() {
               <div className="order-3 md:col-span-8 xl:col-span-2 grid grid-cols-3 gap-4 xl:flex xl:flex-col xl:items-end xl:justify-between xl:h-full">
                 <div className="flex flex-col items-center xl:items-end justify-center">
                   <span className="inline-block text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
-                    <AnimatedNumbers value={2} />+
+                    <AnimatedNumbers value={2} />
                   </span>
                   <h2 className="text-xs sm:text-base md:text-lg xl:text-xl font-medium capitalize text-dark/75 dark:text-light/75 text-center xl:text-right">
-                    Years Experience
+                    Nearly 2 Years Exp.
                   </h2>
                 </div>
 
@@ -162,10 +162,10 @@ export default function About() {
 
                 <div className="flex flex-col items-center xl:items-end justify-center">
                   <span className="inline-block text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold">
-                    <AnimatedNumbers value={6} />+
+                    <AnimatedNumbers value={6} />
                   </span>
                   <h2 className="text-xs sm:text-base md:text-lg xl:text-xl font-medium capitalize text-dark/75 dark:text-light/75 text-center xl:text-right">
-                    Credentials &amp; Award
+                    6 Certifications
                   </h2>
                 </div>
               </div>
@@ -187,24 +187,13 @@ export default function About() {
                     time="December 2024 – Present"
                     address="Chennai, India"
                     bullets={[
-                      "Datalytics (BI & Analytics Platform): Developed features including MCP server tools for AI-assisted data analysis, open-source LLM integration, dynamic reporting, and Nginx reverse proxy routing for Angular and Node.js/NestJS services.",
-                      "LeatherLink TanPro 11.0 (TMS): Developed and maintained features for an enterprise industrial ERP (300+ database tables) covering production, inventory, supply chain and accounts, using PHP, PostgreSQL (schema-per-tenant isolation) and MongoDB (audit logs and approval workflows).",
-                      "Engineered SQL queries, views, materialized views, functions and triggers supporting 5-stage production batch tracking (Beam House to Finishing) and stock assortment.",
-                      "Built automated PDF generation for delivery challans, invoices and job cards using mPDF.",
-                      "Deployed and maintained the application on Apache with PHP-FPM, including server configuration and environment setup.",
+                      "Datalytics Platform: Developed frontend features in Angular and backend REST APIs in Node.js/NestJS; integrated open-source LLMs via Model Context Protocol (MCP) for conversational analytics, routed via Nginx reverse proxy.",
+                      "Datalytics — UI Component Library & Embed SDK: Developed an independent, reusable Angular component library (charts, KPI widgets, dynamic tables) and an in-repo Embed SDK with dedicated package.json; managed independent versioning and npm publishing for both.",
+                      "LeatherLink TanPro 11.0 (TMS): Developed and maintained core ERP features across 300+ database tables for manufacturing operations, inventory, supply chain, and billing using PHP, PostgreSQL, and MongoDB.",
+                      "Implemented PostgreSQL schema-per-tenant isolation for multi-tenant data privacy, and used MongoDB for audit trails and approval tracking.",
+                      "Wrote and optimized SQL queries, views, materialized views, functions, and triggers for production batch tracking and inventory calculations.",
+                      "Built automated PDF generation for delivery challans, invoices, and job cards using mPDF; deployed and maintained the application on Apache with PHP-FPM.",
                     ]}
-                  />
-                  <Details
-                    position="Junior Full-Stack Developer (Intern)"
-                    company="Shiash Info Solutions Private Limited"
-                    time="March 2023 – May 2023"
-                    address="Chennai, India"
-                    bullets={[
-                      "Contributed to full-stack web development tasks using HTML, CSS, and JavaScript.",
-                      "Assisted with feature implementation and debugging within an established software development team and workflow.",
-                    ]}
-                    docLink="/assets/docs/BOOBALAN%20V%20internship.pdf"
-                    docLabel="View Internship Certificate"
                   />
                   <Details
                     position="B.Tech — Information Technology"
@@ -213,7 +202,7 @@ export default function About() {
                     address="Chennai, India | 80% (First Class)"
                     bullets={[
                       "Completed Bachelor of Technology in Information Technology with First Class (80%) distinction.",
-                      "Built academic and personal projects spanning computer vision (KYAAT), Android development, and full-stack web applications.",
+                      "Built academic and personal projects spanning computer vision (KYAAT) and full-stack web applications.",
                     ]}
                   />
                 </ul>
@@ -240,7 +229,7 @@ export default function About() {
                     </p>
                   </div>
                   <Link
-                    href="/articles"
+                    href="/credentials"
                     className="shrink-0 px-5 py-2.5 rounded-full border border-dark bg-dark text-light dark:border-light dark:bg-light dark:text-dark font-bold text-sm hover:opacity-85 transition-opacity"
                   >
                     View Award Photos &amp; Certs &rarr;

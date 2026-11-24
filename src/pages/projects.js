@@ -7,7 +7,7 @@ import kyaatImg from "../../public/assets/images/Kyaat.png";
 import portfolioImg from "../../public/assets/images/Project.png";
 import canteenImg from "../../public/assets/images/canteen.png";
 
-const FeaturedProject = ({ type, title, summary, link, github, img, imgAlt, tags = [], highlights = [] }) => {
+const FeaturedProject = ({ type, title, summary, link, github, img, imgAlt, tags = [], highlights = [], note }) => {
   return (
     <motion.article
       initial={{ y: 40, opacity: 0 }}
@@ -61,6 +61,12 @@ const FeaturedProject = ({ type, title, summary, link, github, img, imgAlt, tags
                 {tag}
               </span>
             ))}
+          </div>
+        )}
+
+        {note && (
+          <div className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-primary/30 bg-primary/5 dark:bg-primaryDark/10 text-xs sm:text-sm font-semibold text-primary dark:text-primaryDark">
+            🔒 {note}
           </div>
         )}
 
@@ -174,69 +180,70 @@ export default function Projects() {
               <div className="col-span-12">
                 <FeaturedProject
                   type="SaaS Product @ Megam Technologies"
-                  title="Datalytics — AI-Powered Business Intelligence SaaS"
-                  summary="Contributed to an AI-powered Business Intelligence & Analytics SaaS platform featuring conversational data analysis, Model Context Protocol (MCP) server tools, dynamic reporting, and Nginx reverse proxy architecture."
+                  title="Datalytics — AI-Powered Business Intelligence Platform"
+                  summary="Business Intelligence and Analytics platform featuring natural-language data queries via open-source LLM, custom Model Context Protocol (MCP) server tools, automated reporting, and Nginx reverse proxy architecture."
                   highlights={[
-                    "Developed and maintained SaaS platform features, including MCP server tools enabling AI-assisted interaction with platform data and functionality.",
-                    "Integrated an open-source large language model (LLM) to support natural-language questions about business data and analytics insights.",
-                    "Implemented dynamic report and dashboard generation covering working hours, time spent, issues created/closed, and comparative employee work activity.",
-                    "Configured Nginx reverse proxy and web server routing to serve the Angular client and route API traffic to Node.js/NestJS backend services.",
+                    "Developed frontend user interfaces in Angular and backend REST APIs in Node.js / NestJS for business analytics dashboards.",
+                    "Integrated an open-source large language model (LLM) using Model Context Protocol (MCP), enabling users to ask business questions in natural language and receive instant data insights.",
+                    "Built dynamic report and dashboard generation to monitor operational metrics such as working hours, task progress, and completed issues.",
+                    "Configured Nginx reverse proxy routing between the Angular client and backend API services; managed GitLab CI/CD pipelines for automated testing and deployments.",
                   ]}
-                  tags={["Angular", "Node.js", "NestJS", "PostgreSQL", "Nginx (Reverse Proxy)", "Model Context Protocol (MCP)", "Open-Source LLM", "SaaS"]}
+                  tags={["Angular", "Node.js", "NestJS", "PostgreSQL", "Nginx (Reverse Proxy)", "Model Context Protocol (MCP)", "Open-Source LLM", "GitLab CI/CD", "SaaS"]}
+                  note="Proprietary, built at Megam Technologies"
+                  link="https://getdatalytics.com"
                 />
               </div>
 
-              {/* 2. ERP Project — LeatherLink TanPro 11.0 (TMS) */}
+              {/* 2. Datalytics — UI Component Library & Embed SDK */}
+              <div className="col-span-12">
+                <FeaturedProject
+                  type="Developer SDK & UI Component Library @ Megam Technologies"
+                  title="Datalytics — UI Component Library & Embed SDK"
+                  summary="Independent, reusable Angular UI component library and client Embed SDK developed for the Datalytics enterprise platform, enabling modular data visualization and secure third-party dashboard embedding."
+                  highlights={[
+                    "UI Component Library: Developed an independent, reusable Angular component library featuring interactive charts (bar, line, area, and pie), KPI widgets with trend indicators, and data tables with sorting, filtering, and pagination. Maintained independent versioning and published the package to npm.",
+                    "Embed SDK: Developed a reusable Embed SDK within the main application repository, with a dedicated package.json and independent npm publishing configuration. Enabled third-party applications to embed live analytics dashboards using token-based authentication.",
+                    "Package Management & Integration: Managed independent versioning and npm releases for both packages, and integrated updated library versions into the main Datalytics SaaS platform.",
+                    "Architecture & Third-Party Integration: Designed clean TypeScript APIs, responsive iframe container messaging, and efficient DOM rendering for seamless external embedding.",
+                  ]}
+                  tags={["Angular", "TypeScript", "JavaScript", "UI Component Library", "Embed SDK", "Dedicated package.json", "npm Registry", "Data Visualization", "Token Authentication"]}
+                  note="Proprietary, built at Megam Technologies"
+                  link="https://getdatalytics.com"
+                />
+              </div>
+
+              {/* 3. ERP Project — LeatherLink TanPro 11.0 (TMS) */}
               <div className="col-span-12">
                 <FeaturedProject
                   type="Enterprise Multi-Tenant ERP @ Megam Technologies"
                   title="LeatherLink TanPro 11.0 (TMS): Multi-Tenant Industrial ERP"
-                  summary="Multi-tenant Industrial ERP for tannery manufacturing, covering production, inventory, supply chain, and accounts across 300+ database tables."
+                  summary="Multi-tenant enterprise ERP system managing manufacturing, inventory, supply chain, and billing across 300+ database tables."
                   highlights={[
-                    "Developed and maintained features for an enterprise industrial ERP (300+ database tables) covering production, inventory, supply chain and accounts, using PHP, PostgreSQL (schema-per-tenant isolation) and MongoDB (audit logs and approval workflows).",
-                    "Engineered SQL queries, views, materialized views, functions and triggers supporting 5-stage production batch tracking (Beam House to Finishing) and stock assortment.",
-                    "Built automated PDF generation for delivery challans, invoices and job cards using mPDF.",
-                    "Deployed and maintained the application on Apache with PHP-FPM, including server configuration and environment setup.",
+                    "Developed and maintained core ERP modules across 300+ database tables covering manufacturing operations, inventory, supply chain, and billing using PHP and PostgreSQL.",
+                    "Implemented schema-per-tenant data isolation in PostgreSQL for customer data security, paired with MongoDB for audit logs and approval workflows.",
+                    "Wrote and optimized SQL queries, views, materialized views, functions, and triggers to handle production batch tracking and inventory updates.",
+                    "Built automated PDF generation for delivery challans, invoices, and job cards using mPDF.",
+                    "Deployed and maintained the application on Apache with PHP-FPM, configuring virtual hosts, process pools, and server environments.",
                   ]}
-                  tags={["PHP", "PostgreSQL", "MongoDB", "Apache & PHP-FPM", "mPDF", "Materialized Views & Triggers", "GitLab CI/CD"]}
+                  tags={["PHP", "PostgreSQL (Schema-Per-Tenant)", "MongoDB (Audit Logs)", "Apache & PHP-FPM", "mPDF", "SQL Queries & Triggers", "Batch Tracking", "ERP"]}
+                  note="Proprietary, built at Megam Technologies"
                 />
               </div>
 
-              {/* 3. Personal Portfolio using Next.js */}
+              {/* 3. KYAAT — Gesture-Controlled Mouse */}
               <div className="col-span-12">
                 <FeaturedProject
-                  type="Web Development — Next.js Portfolio"
-                  title="Developer Portfolio (Next.js)"
-                  summary="Designed and built a modern, responsive personal developer portfolio using Next.js, Tailwind CSS, and Framer Motion to showcase full-stack engineering experience, SaaS & ERP projects, awards, and verified certifications."
-                  img={portfolioImg}
-                  imgAlt="Boobalan V Personal Portfolio Preview"
-                  github="https://github.com/BoobalanIT/Portfolio"
-                  link="https://alanz.netlify.app"
-                  tags={["Next.js", "React", "Tailwind CSS", "Framer Motion", "Responsive UI"]}
-                />
-              </div>
-
-              {/* 4. Others */}
-              <div className="col-span-6 max-md:col-span-12">
-                <Project
                   type="Computer Vision & HCI"
                   title="KYAAT — Gesture-Controlled Mouse"
                   summary="Developed a real-time computer-vision tool using Python and OpenCV to recognize hand movements and landmarks and translate gestures into mouse cursor interactions with sub-20ms response latency."
                   img={kyaatImg}
                   imgAlt="KYAAT Hand Gesture Recognition"
                   github="https://github.com/BoobalanIT/KYAAT"
-                  tags={["Python", "OpenCV", "Computer Vision", "Sub-20ms Latency"]}
-                />
-              </div>
-
-              <div className="col-span-6 max-md:col-span-12">
-                <Project
-                  type="Mobile App Project"
-                  title="MSAJCE Canteen — Android Ordering App"
-                  summary="Android mobile commerce application built to streamline campus cafeteria menu browsing, order processing, and pickup management."
-                  img={canteenImg}
-                  imgAlt="MSAJCE Canteen Android App Logo"
-                  tags={["Android", "Java", "Mobile Development"]}
+                  highlights={[
+                    "Engineered real-time hand-landmark detection using OpenCV, translating optical gestures into smooth mouse cursor navigation and click events.",
+                    "Optimized image processing pipeline to achieve sub-20ms execution latency for touch-free desktop interaction.",
+                  ]}
+                  tags={["Python", "OpenCV", "Computer Vision", "Sub-20ms Latency", "Human-Computer Interaction"]}
                 />
               </div>
             </div>

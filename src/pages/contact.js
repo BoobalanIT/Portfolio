@@ -4,11 +4,22 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+    const mailtoUrl = `mailto:boobalanvaithiyanathan1@gmail.com?subject=${encodeURIComponent(
+      formData.subject || "Portfolio Inquiry from " + formData.name
+    )}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    window.location.href = mailtoUrl;
   };
 
   return (
@@ -129,17 +140,32 @@ export default function Contact() {
                   Send Me a Message
                 </h3>
                 {submitted ? (
-                  <div className="p-6 rounded-xl bg-green-500/10 border border-green-500 text-green-700 dark:text-green-400 font-bold text-center space-y-3">
-                    <p>
-                      Thank you! Your message has been recorded. Boobalan will get back to you shortly.
+                  <div className="p-6 rounded-xl bg-green-500/10 border border-green-500 text-green-700 dark:text-green-400 font-bold text-center space-y-4">
+                    <p className="text-lg">
+                      ✅ Opening your email client to send your message directly to Boobalan!
                     </p>
-                    <p className="text-sm font-medium">
-                      You can also email directly at{" "}
-                      <a href="mailto:boobalanvaithiyanathan1@gmail.com" className="underline">
-                        boobalanvaithiyanathan1@gmail.com
+                    <p className="text-sm font-medium text-dark/80 dark:text-light/80">
+                      If your mail application didn&apos;t launch automatically, please send directly by clicking below:
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-2">
+                      <a
+                        href={`mailto:boobalanvaithiyanathan1@gmail.com?subject=${encodeURIComponent(
+                          formData.subject || "Portfolio Inquiry from " + formData.name
+                        )}&body=${encodeURIComponent(
+                          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+                        )}`}
+                        className="py-2.5 px-6 rounded-lg bg-dark text-light dark:bg-light dark:text-dark font-bold text-sm hover:opacity-85 transition-opacity"
+                      >
+                        Send via Email App &rarr;
                       </a>
-                      .
-                    </p>
+                      <button
+                        type="button"
+                        onClick={() => setSubmitted(false)}
+                        className="py-2.5 px-6 rounded-lg border border-dark/40 dark:border-light/40 text-sm font-semibold hover:bg-dark/10 transition-colors"
+                      >
+                        Edit Message
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="flex flex-col gap-6">
@@ -149,6 +175,9 @@ export default function Contact() {
                       </label>
                       <input
                         type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         required
                         placeholder="John Doe"
                         className="w-full p-3 rounded-lg border border-dark/30 dark:border-light/30 bg-transparent text-dark dark:text-light focus:outline-none focus:border-dark dark:focus:border-light"
@@ -160,6 +189,9 @@ export default function Contact() {
                       </label>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         required
                         placeholder="john@example.com"
                         className="w-full p-3 rounded-lg border border-dark/30 dark:border-light/30 bg-transparent text-dark dark:text-light focus:outline-none focus:border-dark dark:focus:border-light"
@@ -171,6 +203,9 @@ export default function Contact() {
                       </label>
                       <input
                         type="text"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
                         required
                         placeholder="Full-Stack Developer Opportunity / Project Inquiry"
                         className="w-full p-3 rounded-lg border border-dark/30 dark:border-light/30 bg-transparent text-dark dark:text-light focus:outline-none focus:border-dark dark:focus:border-light"
@@ -182,6 +217,9 @@ export default function Contact() {
                       </label>
                       <textarea
                         rows="5"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         required
                         placeholder="Describe your inquiry, role, or project..."
                         className="w-full p-3 rounded-lg border border-dark/30 dark:border-light/30 bg-transparent text-dark dark:text-light focus:outline-none focus:border-dark dark:focus:border-light"

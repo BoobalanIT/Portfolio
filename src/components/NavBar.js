@@ -156,7 +156,7 @@ const NavBar = () => {
           <CustomLink href="/" title="Home" />
           <CustomLink href="/about" title="About" />
           <CustomLink href="/projects" title="Projects" />
-          <CustomLink href="/articles" title="Credentials" />
+          <CustomLink href="/credentials" title="Credentials" />
           <CustomLink href="/contact" title="Contact" />
         </nav>
 
@@ -177,7 +177,7 @@ const NavBar = () => {
           {/* Desktop Theme Switcher */}
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-6 h-6 ease flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+            className={`w-6 h-6 ease flex items-center justify-center rounded-full p-1 cursor-pointer ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
               }`}
             aria-label="Toggle theme"
           >
@@ -217,7 +217,7 @@ const NavBar = () => {
               <CustomMobileLink href="/" title="Home" toggle={handleClick} />
               <CustomMobileLink href="/about" title="About" toggle={handleClick} />
               <CustomMobileLink href="/projects" title="Projects" toggle={handleClick} />
-              <CustomMobileLink href="/articles" title="Credentials" toggle={handleClick} />
+              <CustomMobileLink href="/credentials" title="Credentials" toggle={handleClick} />
               <CustomMobileLink href="/contact" title="Contact" toggle={handleClick} />
             </nav>
 

@@ -5,14 +5,11 @@ import {
   siJavascript,
   siNodedotjs,
   siNestjs,
-  siExpress,
   siPhp,
   siPostgresql,
   siMongodb,
-  siMysql,
   siGit,
   siGitlab,
-  siDocker,
   siNginx,
   siApache,
   siPostman,
@@ -95,19 +92,16 @@ const SKILLS = [
   // Backend
   { name: "Node.js", category: "Backend", icon: <BrandIcon icon={siNodedotjs} /> },
   { name: "NestJS", category: "Backend", icon: <BrandIcon icon={siNestjs} /> },
-  { name: "Express.js", category: "Backend", icon: <BrandIcon icon={siExpress} monochrome /> },
   { name: "PHP", category: "Backend", icon: <BrandIcon icon={siPhp} /> },
   { name: "REST APIs", category: "Backend", icon: <RestApiIcon /> },
 
   // Database
   { name: "PostgreSQL", category: "Database", icon: <BrandIcon icon={siPostgresql} /> },
   { name: "MongoDB", category: "Database", icon: <BrandIcon icon={siMongodb} /> },
-  { name: "MySQL", category: "Database", icon: <BrandIcon icon={siMysql} /> },
 
   // Tools & DevOps
   { name: "Git", category: "Tools & DevOps", icon: <BrandIcon icon={siGit} /> },
   { name: "GitLab CI/CD", category: "Tools & DevOps", icon: <BrandIcon icon={siGitlab} /> },
-  { name: "Docker", category: "Tools & DevOps", icon: <BrandIcon icon={siDocker} /> },
   { name: "Nginx", category: "Tools & DevOps", icon: <BrandIcon icon={siNginx} /> },
   { name: "Apache", category: "Tools & DevOps", icon: <BrandIcon icon={siApache} /> },
   { name: "Postman", category: "Tools & DevOps", icon: <BrandIcon icon={siPostman} /> },
