@@ -170,7 +170,7 @@ const NavBar = () => {
           <a href="https://alanz.netlify.app" target="_blank" rel="noreferrer" aria-label="Previous Portfolio" className="w-6 hover:-translate-y-0.5 transition-transform">
             <GlobeIcon className="w-full h-auto" />
           </a>
-          <a href="mailto:boobalanvaithiyanthan1@gmail.com" aria-label="Email" className="w-6 hover:-translate-y-0.5 transition-transform">
+          <a href="mailto:boobalanvaithiyanathan1@gmail.com" aria-label="Email" className="w-6 hover:-translate-y-0.5 transition-transform">
             <MailIcon className="w-full h-auto" />
           </a>
 
@@ -231,7 +231,7 @@ const NavBar = () => {
               <a href="https://alanz.netlify.app" target="_blank" rel="noreferrer" aria-label="Previous Portfolio" className="w-6 text-light dark:text-dark hover:opacity-80">
                 <GlobeIcon className="w-full h-auto" />
               </a>
-              <a href="mailto:boobalanvaithiyanthan1@gmail.com" aria-label="Email" className="w-6 text-light dark:text-dark hover:opacity-80">
+              <a href="mailto:boobalanvaithiyanathan1@gmail.com" aria-label="Email" className="w-6 text-light dark:text-dark hover:opacity-80">
                 <MailIcon className="w-full h-auto" />
               </a>
             </nav>

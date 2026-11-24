@@ -175,28 +175,30 @@ export default function Projects() {
                 <FeaturedProject
                   type="SaaS Product @ Megam Technologies"
                   title="Datalytics — AI-Powered Business Intelligence SaaS"
-                  summary="Contributed to an AI-powered Business Intelligence & Analytics SaaS platform featuring conversational data analysis, Model Context Protocol (MCP) server tools, and dynamic user-requested reporting."
+                  summary="Contributed to an AI-powered Business Intelligence & Analytics SaaS platform featuring conversational data analysis, Model Context Protocol (MCP) server tools, dynamic reporting, and Nginx reverse proxy architecture."
                   highlights={[
                     "Developed and maintained SaaS platform features, including MCP server tools enabling AI-assisted interaction with platform data and functionality.",
                     "Integrated an open-source large language model (LLM) to support natural-language questions about business data and analytics insights.",
                     "Implemented dynamic report and dashboard generation covering working hours, time spent, issues created/closed, and comparative employee work activity.",
+                    "Configured Nginx reverse proxy and web server routing to serve the Angular client and route API traffic to Node.js/NestJS backend services.",
                   ]}
-                  tags={["Angular", "Node.js", "NestJS", "PostgreSQL", "Model Context Protocol (MCP)", "Open-Source LLM", "SaaS"]}
+                  tags={["Angular", "Node.js", "NestJS", "PostgreSQL", "Nginx (Reverse Proxy)", "Model Context Protocol (MCP)", "Open-Source LLM", "SaaS"]}
                 />
               </div>
 
-              {/* 2. ERP Project — Tannery Application */}
+              {/* 2. ERP Project — LeatherLink TanPro 11.0 (TMS) */}
               <div className="col-span-12">
                 <FeaturedProject
-                  type="Enterprise System @ Megam Technologies"
-                  title="ERP — Tannery Application"
-                  summary="Developed and maintained an Enterprise Resource Planning (ERP) application tailored for tannery operations using PHP, jQuery, JavaScript, and PostgreSQL, supporting core business workflows, interactive UI modules, reporting, and production deployments."
+                  type="Enterprise Multi-Tenant ERP @ Megam Technologies"
+                  title="LeatherLink TanPro 11.0 (TMS): Multi-Tenant Industrial ERP"
+                  summary="Multi-tenant Industrial ERP for tannery manufacturing, covering production, inventory, supply chain, and accounts across 300+ database tables."
                   highlights={[
-                    "Built and maintained full-stack ERP modules with PHP, jQuery, JavaScript, and PostgreSQL, implementing CRUD operations and integrating workflows.",
-                    "Created and modified SQL queries, views, materialized views, functions, and triggers to support complex business requirements and troubleshoot data issues.",
-                    "Configured Nginx and Apache web servers and worked with GitLab CI/CD pipelines, Git, and Postman for API testing and deployment.",
+                    "Developed and maintained features for an enterprise industrial ERP (300+ database tables) covering production, inventory, supply chain and accounts, using PHP, PostgreSQL (schema-per-tenant isolation) and MongoDB (audit logs and approval workflows).",
+                    "Engineered SQL queries, views, materialized views, functions and triggers supporting 5-stage production batch tracking (Beam House to Finishing) and stock assortment.",
+                    "Built automated PDF generation for delivery challans, invoices and job cards using mPDF.",
+                    "Deployed and maintained the application on Apache with PHP-FPM, including server configuration and environment setup.",
                   ]}
-                  tags={["PHP", "jQuery", "JavaScript", "PostgreSQL", "SQL Views & Triggers", "Nginx", "Apache", "GitLab CI/CD"]}
+                  tags={["PHP", "PostgreSQL", "MongoDB", "Apache & PHP-FPM", "mPDF", "Materialized Views & Triggers", "GitLab CI/CD"]}
                 />
               </div>
 

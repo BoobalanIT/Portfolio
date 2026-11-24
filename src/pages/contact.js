@@ -48,10 +48,10 @@ export default function Contact() {
                       EMAIL ADDRESS
                     </span>
                     <a
-                      href="mailto:boobalanvaithiyanthan1@gmail.com"
+                      href="mailto:boobalanvaithiyanathan1@gmail.com"
                       className="block text-sm sm:text-base lg:text-lg font-bold hover:underline dark:text-light break-all"
                     >
-                      boobalanvaithiyanthan1@gmail.com
+                      boobalanvaithiyanathan1@gmail.com
                     </a>
                   </div>
                 </div>
@@ -135,8 +135,8 @@ export default function Contact() {
                     </p>
                     <p className="text-sm font-medium">
                       You can also email directly at{" "}
-                      <a href="mailto:boobalanvaithiyanthan1@gmail.com" className="underline">
-                        boobalanvaithiyanthan1@gmail.com
+                      <a href="mailto:boobalanvaithiyanathan1@gmail.com" className="underline">
+                        boobalanvaithiyanathan1@gmail.com
                       </a>
                       .
                     </p>

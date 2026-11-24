@@ -26,7 +26,7 @@ const HireMe = () => {
           </text>
         </svg>
         <Link
-          href="mailto:boobalanvaithiyanthan1@gmail.com"
+          href="mailto:boobalanvaithiyanathan1@gmail.com"
           className="flex items-center justify-center absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 shadow-md border border-solid bg-dark rounded-full text-white w-16 h-16 xl:w-20 xl:h-20 text-xs xl:text-sm font-semibold hover:bg-light hover:border-dark hover:text-dark dark:text-dark dark:bg-light dark:hover:bg-dark dark:hover:text-light dark:hover:border-light dark:shadow-light/25"
         >
           Hire Me

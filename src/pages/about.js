@@ -187,11 +187,11 @@ export default function About() {
                     time="December 2024 – Present"
                     address="Chennai, India"
                     bullets={[
-                      "Datalytics (BI & Analytics Platform): Developed and maintained features including MCP server tools for AI-assisted interaction with platform data and functionality.",
-                      "Integrated an open-source LLM to answer natural-language questions about business data and generate reports & dashboards covering working hours, time spent, and issue metrics.",
-                      "Supported comparative analysis of employee work activity and time allocation alongside bug fixes, enhancements, and maintenance.",
-                      "ERP — Tannery Application: Developed and maintained features using PHP, jQuery, JavaScript, and PostgreSQL; built CRUD workflows, SQL queries, views, materialized views, functions, and triggers.",
-                      "Deployment & Operations: Configured Nginx and Apache web servers, worked with GitLab CI/CD pipelines, Git, and Postman for API testing.",
+                      "Datalytics (BI & Analytics Platform): Developed features including MCP server tools for AI-assisted data analysis, open-source LLM integration, dynamic reporting, and Nginx reverse proxy routing for Angular and Node.js/NestJS services.",
+                      "LeatherLink TanPro 11.0 (TMS): Developed and maintained features for an enterprise industrial ERP (300+ database tables) covering production, inventory, supply chain and accounts, using PHP, PostgreSQL (schema-per-tenant isolation) and MongoDB (audit logs and approval workflows).",
+                      "Engineered SQL queries, views, materialized views, functions and triggers supporting 5-stage production batch tracking (Beam House to Finishing) and stock assortment.",
+                      "Built automated PDF generation for delivery challans, invoices and job cards using mPDF.",
+                      "Deployed and maintained the application on Apache with PHP-FPM, including server configuration and environment setup.",
                     ]}
                   />
                   <Details
