@@ -187,12 +187,12 @@ export default function About() {
                     time="December 2024 – Present"
                     address="Chennai, India"
                     bullets={[
-                      "Datalytics Platform: Developed responsive frontend components using Angular and integrated REST APIs built with Node.js and NestJS; integrated an open-source Large Language Model (LLM) with Model Context Protocol (MCP) for natural language querying.",
-                      "Datalytics — UI Component Library & Embed SDK: Developed an independent, reusable Angular component library (charts, KPI widgets, tables, report settings) and an in-repo Embed SDK with dedicated package.json; managed independent versioning and npm releases for both.",
-                      "LeatherLink TanPro 11.0 — Tannery Management System (TMS): Migrated PHP servers and configured deployment environments; developed core ERP modules across 300+ database tables using PHP, PostgreSQL schema-per-tenant architecture, and MongoDB audit logs.",
-                      "Optimized database queries, triggers, views, and functions; built automated mPDF generation for delivery challans and invoices; configured Apache, PHP-FPM, and cron job automation.",
+                      "Datalytics Platform: Developed responsive frontend components using Angular and integrated REST APIs built with Node.js and NestJS; integrated an open-source Large Language Model (LLM) with Model Context Protocol (MCP) for conversational business intelligence and querying.",
+                      "Datalytics — UI Component Library & Embed SDK: Developed an independent, reusable Angular component library (charts, KPI widgets, data tables with sorting/filtering/pagination) and an Embed SDK with dedicated package.json and npm publishing configuration; managed releases and platform integration.",
+                      "LeatherLink TanPro 11.0 — Tannery Management System (TMS): Migrated PHP applications and servers, configured deployment environments, and maintained core modules using PHP and PostgreSQL across 300+ database tables.",
+                      "Implemented PostgreSQL schema-per-tenant architecture to maintain separate database schemas for different enterprise clients, with MongoDB-based audit logging and multi-level approval workflows.",
                       "Developed and optimized SQL queries, views, materialized views, functions, and triggers to support application workflows and database operations.",
-                      "Implemented automated PDF generation using mPDF for delivery challans, GST invoices, and job cards; deployed and maintained the application using Apache and PHP-FPM.",
+                      "Implemented automated PDF generation using mPDF for delivery challans, GST invoices, and job cards, and configured Apache, PHP-FPM, and cron jobs for background task automation.",
                     ]}
                   />
                   <Details
